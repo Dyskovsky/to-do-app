@@ -1,0 +1,8 @@
+
+<ng-container *ngIf="items$ | async as items">
+<div *ngFor="let item of items">
+    <div> {{item.description }}</div>
+    <input type="checkbox" [checked]="item.status"
+          (click)="valueChange(item, $event)"> <span> {{item.status}}</span>
+</div>
+</ng-container>
